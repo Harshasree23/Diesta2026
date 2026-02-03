@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+@keyframes float {
+    0% {
+        top: 50%;
+        left: 10%;
+    }
+    20% {
+        top: 35%;
+        left: 25%;
+    }
+    40% {
+        top: 50%;
+        left: 50%;
+    }
+    60% {
+        top: 65%;
+        left: 75%;
+    }
+    80%{
+        top:50%;
+        left:50%;
+    }
+    100% {
+        top: 50%;
+        left: 10%;
+    }
+}
+
+.animate-float {
+    animation: float 10s ease-in-out infinite;
+}
+

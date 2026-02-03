@@ -7,6 +7,7 @@ import LeaderBoard from './pages/LeaderBoard'
 
 import { Route, Routes } from 'react-router-dom'
 import Nav from './ui/Nav'
+import Landing from './pages/Landing'
 
 function Page() {
 
@@ -16,7 +17,7 @@ function Page() {
         <Nav/>
 
         <Routes>
-              <Route path='/' element={<About />} />
+              <Route path='/' element={<Landing />} />
               <Route path='/about' element={<About />} />
               <Route path='/schedule' element={<Schedule />} />
               <Route path='/shop' element={<Shop />} />
