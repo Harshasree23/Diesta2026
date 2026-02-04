@@ -1,4 +1,5 @@
 import Triangle from '../assets/triangle.png';
+import ProfileCard from '../ui/Card';
 
 const Landing = () => {
 return (
@@ -28,8 +29,7 @@ return (
         </div>
 
         {/* Slogan */}
-        <div className="py-7 px-5 mx-auto my-2
-            border border-white/20
+        <div className="py-7 sm:px-5 mx-auto my-2
             rounded-xl
             backdrop-blur-lg
             shadow-lg shadow-black/20
@@ -45,6 +45,54 @@ return (
             <div className='absolute w-8 h-8 -z-1 bg-[#FFD700] animate-float blur-sm'>  </div>
         </div>
 
+        {/* Location and time */}
+
+
+        {/* Cards */}
+        <div className='flex flex-wrap gap-5 justify-center my-10' >
+            <ProfileCard/>
+            <ProfileCard/>
+            <ProfileCard/>
+            <ProfileCard/>
+            <ProfileCard/>
+            <ProfileCard/>
+        </div>
+        
+        {/* contact - footer */}
+        <div className='text-white border-t-2 border-t-[#FFD700]' >
+        <footer className='flex justify-between flex-wrap' >
+
+            <div className='text-[#FFD700] text-2xl mb-5 flex-1' >  
+                <div> Diesta 2026 </div>
+                <div> logo </div>
+            </div>
+
+            <div className='flex flex-col text-black bg-[#FFD700] flex-1' >
+                
+                <div className='flex gap-5' >
+                    <div>Insta logo</div>
+                    <div>handle</div>
+                </div>
+
+                <div className='flex gap-5' >
+                    <div>Insta logo</div>
+                    <div>handle</div>
+                </div>
+
+                <div className='flex gap-5' >
+                    <div>Insta logo</div>
+                    <div>handle</div>
+                </div>
+
+                <div className='flex gap-5' >
+                    <div>Insta logo</div>
+                    <div>handle</div>
+                </div>
+
+            </div>
+
+        </footer>
+        </div>
     </div>
 )
 }
