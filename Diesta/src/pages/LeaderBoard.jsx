@@ -31,7 +31,18 @@ export default function LeaderBoard() {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Leaderboard</h1>
+      <style>{`
+        .leaderboard-selection ::selection {
+          background-color: rgba(255, 215, 0, 0.6) !important;
+          color: #ffffff !important;
+        }
+        .leaderboard-selection ::-moz-selection {
+          background-color: rgba(255, 215, 0, 0.6) !important;
+          color: #ffffff !important;
+        }
+      `}</style>
+      <div className="leaderboard-selection">
+        <h1 style={styles.title}>Leaderboard</h1>
 
       {/* ===== TOTAL POINTS ===== */}
       <Section title="🔥 Total Points">
@@ -47,6 +58,7 @@ export default function LeaderBoard() {
       <Section title="🎭 Culturals Points">
         <PointsList items={data.culturals.points} />
       </Section>
+      </div>
     </div>
   );
 }
@@ -55,8 +67,8 @@ export default function LeaderBoard() {
 
 function Section({ title, children }) {
   return (
-    <section style={{ marginBottom: 40 }}>
-      <h2>{title}</h2>
+    <section style={{ marginBottom: 40, color: "#ffffff" }}>
+      <h2 style={{ color: "#ffffff" }}>{title}</h2>
       {children}
     </section>
   );
@@ -89,11 +101,13 @@ const styles = {
   },
   center: {
     textAlign: "center",
-    marginTop: 40
+    marginTop: 40,
+    color: "#ffffff"
   },
   title: {
     textAlign: "center",
-    marginBottom: 30
+    marginBottom: 30,
+    color: "#ffffff"
   },
   list: {
     listStyle: "none",
@@ -103,6 +117,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     padding: "10px 14px",
-    borderBottom: "1px solid #ddd"
+    borderBottom: "1px solid #ddd",
+    color: "#ffffff"
   }
 };
