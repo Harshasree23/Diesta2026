@@ -12,13 +12,12 @@ const menuItems = [
 { to: "/about", label: "About" },
 { to: "/schedule", label: "Schedule" },
 { to: "/shop", label: "Shop" },
-{ to: "/people", label: "People" },
 { to: "/rules", label: "Rules" },
 { to: "/leaderboard", label: "LeaderBoard" },
 ];
 
 return (
-<div className="bg-black/80 px-5 py-2 fixed inset-x-0 z-50 shadow-gold">
+<div className="bg-black/40 px-5 py-2 fixed inset-x-0 z-50 shadow-gold">
 
     <div className="flex justify-between items-center max-w-7xl mx-auto">
 

@@ -12,33 +12,28 @@ body {
 
 
 @keyframes float {
-    0% {
-        top: 50%;
-        left: 10%;
-    }
-    20% {
-        top: 35%;
-        left: 25%;
-    }
-    40% {
-        top: 50%;
-        left: 50%;
-    }
-    60% {
-        top: 65%;
-        left: 75%;
-    }
-    80%{
-        top:50%;
-        left:50%;
-    }
-    100% {
-        top: 50%;
-        left: 10%;
-    }
+  0%   { transform: translate(-120px, 0); }
+  20%  { transform: translate(-40px, -40px); }
+  40%  { transform: translate(80px, 0); }
+  60%  { transform: translate(40px, 40px); }
+  80%  { transform: translate(-60px, 0); }
+  100% { transform: translate(-120px, 0); }
 }
 
 .animate-float {
-    animation: float 10s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
 }
 
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}

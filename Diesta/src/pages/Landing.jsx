@@ -1,11 +1,21 @@
 import Triangle from '../assets/triangle.png';
-import ProfileCard from '../ui/Card';
-import DiestaLogo from '../assets/diesta-logo.png';
-import { Link } from "react-router-dom";
+// import ProfileCard from '../ui/Card';
+import backGif from '../assets/back.gif';
+import civil from '../assets/civ.png';
+import chemical from '../assets/chemical.png';
+import cse from '../assets/cse.png';
+import bme from '../assets/bme.png';
+import mae from '../assets/mae.png';
+import Scroll from '../ui/Scroll';
 
 const Landing = () => {
 return (
-    <div className='bg-black w-full flex flex-col' >
+    <div className='bg-black w-full flex flex-col relative' >
+
+        {/* back vid */}
+        <div className="absolute inset-0 z-0 top-10">
+            <img src={backGif} alt="Background" className="w-screen h-screen object-cover opacity-20" />
+        </div>
 
         {/* Main thing */}
         <div className='relative h-screen flex justify-center items-center w-fit ml-[1%] sm:ml-[5%]' >
@@ -31,7 +41,7 @@ return (
         </div>
 
         {/* Slogan */}
-        <div className="py-7 sm:px-5 mx-auto my-2
+        <div className="py-7 sm:px-5 mx-auto mt-30
             rounded-xl
             backdrop-blur-lg
             shadow-lg shadow-black/20
@@ -41,61 +51,28 @@ return (
             text-center
             relative
             ">
-            <div className='z-2' >“Six pools. One fest.</div>
-            <div className='z-2' >Sport and culture in motion.”</div>
+            <div className='z-10' >“Six pools. One fest.</div>
+            <div className='z-10' >Sport and culture in motion.”</div>
 
-            <div className='absolute w-8 h-8 -z-1 bg-[#FFD700] animate-float blur-sm'>  </div>
+            <div className="absolute top-1/2 left-[20%] -z-10 w-8 h-8 bg-[#FFD700]/60 animate-float blur-sm rounded-full"></div>
+            <div className="absolute top-1/4 right-[20%] -z-10 w-8 h-8 bg-[#FFD700]/60 animate-float blur-sm rounded-full"></div>
         </div>
 
         {/* Location and time */}
 
 
         {/* Cards */}
-        <div className='flex flex-wrap gap-5 justify-center my-10' >
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
+        <div className='my-30' >
+            <Scroll images={[civil, chemical, cse, bme, mae]} />
+            {/* <ProfileCard image={civil} title="Civil / MSME / EM / Interdisciplinary" width='w-55' />
+            <ProfileCard image={chemical} title="Chemical / Chemistry / IC / Design"  />
+            <ProfileCard image={cse} title="CSE / MnC / Mathematics / Physics"  />
+            <ProfileCard image={bme} title="BME / BTE / ES / EP" />
+            <ProfileCard image={mae} title="MAE / LA / Climate Change / Heritage Science" /> */}
         </div>
         
         {/* contact - footer */}
-        <div className='text-white border-t-2 border-t-[#FFD700]' >
-
-        <footer className='flex flex-col items-center justify-center sm:flex-row md:justify-between justify-center flex-wrap' >
-
-            <div className='text-[#FFD700] w-[30%] text-2xl mb-5  sm:p-10' > 
-                <div> <img src={DiestaLogo} alt="Diesta logo" className='h-20' /> </div>
-            </div>
-            
-
-            <div className='flex flex-col text-black bg-[#FFD700] flex-1 p-10' >
-                
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-            </div>
-
-        </footer>
-        </div>
+        
 
     </div>
 )
