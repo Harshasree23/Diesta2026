@@ -1,9 +1,15 @@
 import Triangle from '../assets/triangle.png';
 import ProfileCard from '../ui/Card';
+import backGif from '../assets/back.gif';
 
 const Landing = () => {
 return (
-    <div className='bg-black w-full flex flex-col' >
+    <div className='bg-black w-full flex flex-col relative' >
+
+        {/* back vid */}
+        <div className="absolute inset-0 z-0 top-10">
+            <img src={backGif} alt="Background" className="w-screen h-screen object-cover opacity-20" />
+        </div>
 
         {/* Main thing */}
         <div className='relative h-screen flex justify-center items-center w-fit ml-[1%] sm:ml-[5%]' >
@@ -29,7 +35,7 @@ return (
         </div>
 
         {/* Slogan */}
-        <div className="py-7 sm:px-5 mx-auto my-2
+        <div className="py-7 sm:px-5 mx-auto my-30
             rounded-xl
             backdrop-blur-lg
             shadow-lg shadow-black/20
@@ -39,10 +45,11 @@ return (
             text-center
             relative
             ">
-            <div className='z-2' >“Six pools. One fest.</div>
-            <div className='z-2' >Sport and culture in motion.”</div>
+            <div className='z-10' >“Six pools. One fest.</div>
+            <div className='z-10' >Sport and culture in motion.”</div>
 
-            <div className='absolute w-8 h-8 -z-1 bg-[#FFD700] animate-float blur-sm'>  </div>
+            <div className="absolute top-1/2 left-[20%] -z-10 w-8 h-8 bg-[#FFD700]/60 animate-float blur-sm rounded-full"></div>
+            <div className="absolute top-1/4 right-[20%] -z-10 w-8 h-8 bg-[#FFD700]/60 animate-float blur-sm rounded-full"></div>
         </div>
 
         {/* Location and time */}

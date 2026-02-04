@@ -2,7 +2,7 @@ import Diestalogo from '../assets/diesta-logo.png';
 
 const About = () => {
 return (
-    <div className="bg-black min-h-screen text-white pt-15 sm:pt-25">
+    <div className="bg-black min-h-screen text-white pt-15 sm:pt-25 pb-20">
 
         <div className="text-[#FFD700] text-3xl sm:text-5xl flex justify-end items-end pr-10" >
             <div>
