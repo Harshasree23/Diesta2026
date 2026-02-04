@@ -14,7 +14,7 @@ return (
 
         <div className='relative bg-black'>
         {/* back vid */}
-        <div className="absolute inset-0 z-0 top-10 h-fit">
+        <div className="absolute inset-0 z-0 top-0 h-fit">
             <img src={backGif} alt="Background" className="w-screen h-screen object-cover opacity-20" />
         </div>
 
