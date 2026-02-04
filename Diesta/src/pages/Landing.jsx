@@ -10,10 +10,11 @@ import Scroll from '../ui/Scroll';
 
 const Landing = () => {
 return (
-    <div className='bg-black w-full flex flex-col relative' >
+    <div className='bg-diesta-dots w-full flex flex-col relative' >
 
+        <div className='relative bg-black'>
         {/* back vid */}
-        <div className="absolute inset-0 z-0 top-10">
+        <div className="absolute inset-0 z-0 top-10 h-fit">
             <img src={backGif} alt="Background" className="w-screen h-screen object-cover opacity-20" />
         </div>
 
@@ -38,6 +39,7 @@ return (
                     animate-pulse
                     "/>
 
+        </div>
         </div>
 
         {/* Slogan */}
