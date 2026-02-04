@@ -1,11 +1,17 @@
+import Diestalogo from '../assets/diesta-logo.png';
 
 const About = () => {
 return (
-    <div className="bg-black text-white pt-15 sm:pt-25">
+    <div className="bg-black min-h-screen text-white pt-15 sm:pt-25">
 
-        <div className="text-[#FFD700] text-3xl sm:text-5xl flex flex-col items-end pr-10" >
-            <div>Diesta</div>
-            <div>2026</div>
+        <div className="text-[#FFD700] text-3xl sm:text-5xl flex justify-end items-end pr-10" >
+            <div>
+                <div>Diesta</div>
+                <div>2026</div>
+            </div>
+            <div>
+                <img src={Diestalogo} alt="Diesta Logo" className="h-20 sm:h-28 mt-2" />
+            </div>
         </div>
 
         {/* Basic information */}
@@ -20,19 +26,34 @@ return (
         <div className="px-8 sm:px-15 my-8" >
             <div className="text-[#FFD700] text-2xl sm:text-3xl " > Pools Participating </div>
             <div>
-                Civil / MSME / EM / Interdisciplinary
+                <div>
+                    Civil / MSME / EM / Interdisciplinary
+                </div>
 
-                Chemical / Chemistry / IC / Design
+                <div>
+                    Chemical / Chemistry / IC / Design
+                </div>
 
-                CSE / MnC / Mathematics / Physics
+                <div>
+                    CSE / MnC / Mathematics / Physics
+                </div>
 
-                BME / BTE / ES / EP
+                <div>
+                    BME / BTE / ES / EP
+                </div>
 
-                EE / AI / IC Design / CoE
+                <div>
+                    EE / AI / IC Design / CoE
+                </div>
 
-                MAE / LA / Climate Change / Heritage Science
+                <div>
+                    MAE / LA / Climate Change / Heritage Science
+                </div>
 
-                Faculty / Staff
+                <div>
+                    Faculty / Staff
+                </div>
+
             </div>
 
         </div>

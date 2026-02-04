@@ -7,7 +7,7 @@ content2 = "5+ Years Experience",
 return (
     <div
     className="
-        group relative w-70 h-60 sm:h-70
+        group relative w-50 sm:w-70 h-60 sm:h-70
         bg-black
         rounded-2xl overflow-hidden
         flex flex-col items-center justify-center

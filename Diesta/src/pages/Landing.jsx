@@ -1,5 +1,7 @@
 import Triangle from '../assets/triangle.png';
 import ProfileCard from '../ui/Card';
+import DiestaLogo from '../assets/diesta-logo.png';
+import { Link } from "react-router-dom";
 
 const Landing = () => {
 return (
@@ -8,7 +10,7 @@ return (
         {/* Main thing */}
         <div className='relative h-screen flex justify-center items-center w-fit ml-[1%] sm:ml-[5%]' >
 
-            <div className='z-2 text-[#FFD700] text-5xl md:text-8xl sm:text-7xl sm:border-r border-[#FFD700] px-30' > 
+            <div className='z-2 text-[#FFD700] text-5xl md:text-8xl sm:text-7xl sm:border-r border-[#FFD700] px-20 sm:px-30' > 
                 <div> Diesta </div>
                 <div> 2026 </div>
             </div>
@@ -34,7 +36,7 @@ return (
             backdrop-blur-lg
             shadow-lg shadow-black/20
             text-[#FFD700]
-            text-3xl sm:text-4xl md:text-5xl
+            text-2xl sm:text-4xl md:text-5xl
             font-light
             text-center
             relative
@@ -60,14 +62,15 @@ return (
         
         {/* contact - footer */}
         <div className='text-white border-t-2 border-t-[#FFD700]' >
-        <footer className='flex justify-between flex-wrap' >
 
-            <div className='text-[#FFD700] text-2xl mb-5 flex-1' >  
-                <div> Diesta 2026 </div>
-                <div> logo </div>
+        <footer className='flex flex-col items-center justify-center sm:flex-row md:justify-between justify-center flex-wrap' >
+
+            <div className='text-[#FFD700] w-[30%] text-2xl mb-5  sm:p-10' > 
+                <div> <img src={DiestaLogo} alt="Diesta logo" className='h-20' /> </div>
             </div>
+            
 
-            <div className='flex flex-col text-black bg-[#FFD700] flex-1' >
+            <div className='flex flex-col text-black bg-[#FFD700] flex-1 p-10' >
                 
                 <div className='flex gap-5' >
                     <div>Insta logo</div>
@@ -93,6 +96,7 @@ return (
 
         </footer>
         </div>
+
     </div>
 )
 }
