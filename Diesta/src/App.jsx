@@ -8,6 +8,7 @@ import LeaderBoard from './pages/LeaderBoard'
 import { Route, Routes } from 'react-router-dom'
 import Nav from './ui/Nav'
 import Landing from './pages/Landing'
+import Footer from './ui/Footer'
 
 function Page() {
 
@@ -25,6 +26,8 @@ function Page() {
               <Route path='/rules' element={<Rules />} />
               <Route path='/leaderboard' element={<LeaderBoard />} />
         </Routes>
+
+        <Footer/>
     </div>
   )
 }

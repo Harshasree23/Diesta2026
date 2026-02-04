@@ -18,9 +18,6 @@ return (
 
     {/* Header */}
     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-10">
-        <h1 className="text-3xl md:text-4xl tracking-wide">
-        DIESTA’26 – Rules & Regulations
-        </h1>
 
         <a
         href="https://drive.google.com/file/d/1Dktj6enhAP6MoKoustfHz0UNXx4DHVRf/view?usp=sharing"
@@ -32,20 +29,22 @@ return (
         Open Full Rulebook (PDF)
         <FiExternalLink />
         </a>
+
+         {/* Search */}
+        <div className="relative flex-1">
+            <FiSearch className="absolute left-3 top-3 text-white" />
+            <input
+            type="text"
+            placeholder="Search rules, events, penalties..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="w-full bg-black border border-white rounded
+                        pl-10 pr-4 py-2"
+            />
+        </div>
+
     </div>
 
-    {/* Search */}
-    <div className="relative mb-10">
-        <FiSearch className="absolute left-3 top-3 text-white" />
-        <input
-        type="text"
-        placeholder="Search rules, events, penalties..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className="w-full bg-black border border-white rounded
-                    pl-10 pr-4 py-2"
-        />
-    </div>
 
     {/* Rules Content */}
     <div className="space-y-10">

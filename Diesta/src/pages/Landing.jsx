@@ -1,7 +1,5 @@
 import Triangle from '../assets/triangle.png';
 import ProfileCard from '../ui/Card';
-import DiestaLogo from '../assets/diesta-logo.png';
-import { Link } from "react-router-dom";
 
 const Landing = () => {
 return (
@@ -61,41 +59,7 @@ return (
         </div>
         
         {/* contact - footer */}
-        <div className='text-white border-t-2 border-t-[#FFD700]' >
-
-        <footer className='flex flex-col items-center justify-center sm:flex-row md:justify-between justify-center flex-wrap' >
-
-            <div className='text-[#FFD700] w-[30%] text-2xl mb-5  sm:p-10' > 
-                <div> <img src={DiestaLogo} alt="Diesta logo" className='h-20' /> </div>
-            </div>
-            
-
-            <div className='flex flex-col text-black bg-[#FFD700] flex-1 p-10' >
-                
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-                <div className='flex gap-5' >
-                    <div>Insta logo</div>
-                    <div>handle</div>
-                </div>
-
-            </div>
-
-        </footer>
-        </div>
+        
 
     </div>
 )
