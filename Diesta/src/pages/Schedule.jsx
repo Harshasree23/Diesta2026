@@ -570,17 +570,8 @@ const Schedule = () => {
 
   // Color mapping for events based on their title for visual differentiation
   const getEventColor = (eventTitle, eventId) => {
-    const colors = [
-      'rgba(212, 175, 55, 0.08)', // gold
-      'rgba(100, 200, 255, 0.08)', // blue
-      'rgba(150, 100, 255, 0.08)', // purple
-      'rgba(100, 255, 150, 0.08)', // green
-      'rgba(255, 150, 100, 0.08)', // orange
-      'rgba(255, 100, 200, 0.08)', // pink
-      'rgba(100, 255, 255, 0.08)', // cyan
-    ];
-    // Use event ID to cycle through colors for consistency
-    return colors[eventId % colors.length];
+    // Use a single subtle gold-tinted background for all events
+    return 'rgba(212, 175, 55, 0.06)';
   };
 
   // Render title with emoji

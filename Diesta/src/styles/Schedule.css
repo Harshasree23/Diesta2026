@@ -120,14 +120,14 @@
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  flex-wrap: nowrap !important;
+  flex-wrap: wrap !important;
   margin-bottom: 36px;
   padding: 8px 12px;
   position: relative;
   z-index: 1;
-  overflow-x: auto !important;
+  overflow-x: visible !important;
   -webkit-overflow-scrolling: touch;
-  white-space: nowrap !important;
+  white-space: normal !important;
   scroll-behavior: smooth;
 }
 
