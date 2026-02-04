@@ -50,12 +50,12 @@ return (
 
         {/* Cards */}
         <div className='flex flex-wrap gap-5 justify-center my-10' >
-            <ProfileCard/>
-            <ProfileCard/>
-            <ProfileCard/>
-            <ProfileCard/>
-            <ProfileCard/>
-            <ProfileCard/>
+            <ProfileCard  />
+            <ProfileCard  />
+            <ProfileCard  />
+            <ProfileCard  />
+            <ProfileCard  />
+            <ProfileCard  />
         </div>
         
         {/* contact - footer */}

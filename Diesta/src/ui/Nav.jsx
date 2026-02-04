@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import IITHLogo from '../assets/IITH_logo.png';
+// import IITHLogo from '../assets/IITH_logo.png';
+import Diestalogo from '../assets/diesta-logo.png';
 
 const Nav = () => {
 
@@ -15,7 +16,7 @@ const toggleMenu = () => setIsOpen(!isOpen);
         
         {/* College logo */}
         <Link to="/">
-            <img src={IITHLogo} alt="IITH Logo" className="h-12 sm:h-14" />
+            <img src={Diestalogo} alt="Diesta Logo" className="h-12 sm:h-14" />
         </Link>
 
         {/* Desktop Menu */}
