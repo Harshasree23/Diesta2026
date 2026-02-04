@@ -1,6 +1,12 @@
 import Triangle from '../assets/triangle.png';
-import ProfileCard from '../ui/Card';
+// import ProfileCard from '../ui/Card';
 import backGif from '../assets/back.gif';
+import civil from '../assets/civ.png';
+import chemical from '../assets/chemical.png';
+import cse from '../assets/cse.png';
+import bme from '../assets/bme.png';
+import mae from '../assets/mae.png';
+import Scroll from '../ui/Scroll';
 
 const Landing = () => {
 return (
@@ -35,7 +41,7 @@ return (
         </div>
 
         {/* Slogan */}
-        <div className="py-7 sm:px-5 mx-auto my-30
+        <div className="py-7 sm:px-5 mx-auto mt-30
             rounded-xl
             backdrop-blur-lg
             shadow-lg shadow-black/20
@@ -56,13 +62,13 @@ return (
 
 
         {/* Cards */}
-        <div className='flex flex-wrap gap-5 justify-center my-10' >
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
-            <ProfileCard  />
+        <div className='my-30' >
+            <Scroll images={[civil, chemical, cse, bme, mae]} />
+            {/* <ProfileCard image={civil} title="Civil / MSME / EM / Interdisciplinary" width='w-55' />
+            <ProfileCard image={chemical} title="Chemical / Chemistry / IC / Design"  />
+            <ProfileCard image={cse} title="CSE / MnC / Mathematics / Physics"  />
+            <ProfileCard image={bme} title="BME / BTE / ES / EP" />
+            <ProfileCard image={mae} title="MAE / LA / Climate Change / Heritage Science" /> */}
         </div>
         
         {/* contact - footer */}
