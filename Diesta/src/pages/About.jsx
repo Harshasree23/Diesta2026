@@ -1,9 +1,10 @@
 import Diestalogo from '../assets/diesta-logo.png';
-import civil from '../assets/civ.png';
-import chemical from '../assets/chemical.png';
-import cse from '../assets/cse.png';
-import bme from '../assets/bme.png';
-import mae from '../assets/mae.png';
+import civil from '../../public/images/CE_MSME_ID_EM_LOGO.png';
+import chemical from '../../public/images/CH_CY_IC_DESIGN_LOGO.png';
+import cse from '../../public/images/CSE_MNC_MA_PHY_LOGO.png';
+import bme from '../../public/images/EP_ES_BT_BM_LOGO.png';
+import mae from '../../public/images/MAE_LA_HS_CC_LOGO.png';
+import ee from '../../public/images/EE_AI_ICDT_COE_LOGO.png';
 
 const diestaEvents = {
 culturals: [
@@ -76,36 +77,38 @@ return (
             </div>
 
             <ul className="space-y-4 text-white w-[50%] text-lg flex flex-col  mx-auto">
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
                     <img src={civil} alt="Civil" className="h-25 rounded-lg" />
                     Civil / MSME / EM / Interdisciplinary
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
                     <img src={chemical} alt="Chemical" className="h-25 rounded-lg" />
                     Chemical / Chemistry / IC / Design
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
                     <img src={cse} alt="CSE" className="h-25 rounded-lg" />
                     CSE / MnC / Mathematics / Physics
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
                     <img src={bme} alt="BME" className="h-25 rounded-lg" />
                     BME / BTE / ES / EP
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
+                    <img src={ee} alt="EE" className="h-25 rounded-lg" />
                     EE / AI / IC Design / CoE
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
                     <img src={mae} alt="MAE" className="h-25 rounded-lg" />
                     MAE / LA / Climate Change / Heritage Science
                 </li>
 
-                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4">
+                <li className="flex flex-wrap justify-center text-sm sm:text-md sm:justify-between items-center gap-4 text-xl">
+                    <div></div>
                     Faculty / Staff
                 </li>
             </ul>

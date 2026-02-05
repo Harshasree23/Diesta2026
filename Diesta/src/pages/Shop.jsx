@@ -15,7 +15,7 @@ const Shop = () => {
       name: 'CE/MSME/ID/EM',
       logo: 'images/CE_MSME_ID_EM_LOGO.png',
       motto: 'Engineering Excellence',
-      jersey: 'images/CE_MSME_ID_EM_JERSEY.png',
+      jersey: 'images/CE_MSME_ID_EM_JERSEY.jpeg',
       formLink: 'https://docs.google.com/forms/d/e/1FAIpQLSdSAaYUicBRGgcZd0MqNjZXxJq7VXkekHollFxXjn0_zGOL6A/viewform?usp=publish-editor'
     },
     {
@@ -158,7 +158,7 @@ const Shop = () => {
 
               <div className="p-6">
                 <h3 className="font-light text-xl text-[#FFD700] ">{p.name} Jersey</h3>
-                <p className="font-bebas text-2xl text-[#FFD700]">₹499</p>
+                <p className="font-bebas text-2xl text-[#FFD700]">₹399</p>
 
               <a
                 href={p.formLink}

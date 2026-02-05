@@ -6,8 +6,9 @@ import chemical from '../../public/images/CH_CY_IC_DESIGN_LOGO.png';
 import cse from '../../public/images/CSE_MNC_MA_PHY_LOGO.png';
 import bme from '../../public/images/EP_ES_BT_BM_LOGO.png';
 import mae from '../../public/images/MAE_LA_HS_CC_LOGO.png';
-import Scroll from '../ui/Scroll';
 import ee from '../../public/images/EE_AI_ICDT_COE_LOGO.png';
+import Scroll from '../ui/Scroll';
+
 
 const Landing = () => {
 return (
