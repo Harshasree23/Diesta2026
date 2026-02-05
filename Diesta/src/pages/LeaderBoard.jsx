@@ -14,7 +14,8 @@ export default function LeaderBoard() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://script.google.com/macros/s/AKfycbzZFrc_q2FqZ612KBdXO4RUO-VlZ1A9foLbx-YFh2w4JzVVahnEYS5RLuKBiMAQEKfBAg/exec";
+  const API_URL =
+    "https://script.google.com/macros/s/AKfycbzZFrc_q2FqZ612KBdXO4RUO-VlZ1A9foLbx-YFh2w4JzVVahnEYS5RLuKBiMAQEKfBAg/exec";
 
   useEffect(() => {
     fetch(API_URL)
@@ -26,38 +27,46 @@ export default function LeaderBoard() {
       .catch(() => setLoading(false));
   }, []);
 
-  if (loading) return <h2 style={styles.center}>Loading leaderboard…</h2>;
-  if (!data) return <h2 style={styles.center}>No data</h2>;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-yellow-400 text-xl">
+        Loading leaderboard…
+      </div>
+    );
+  }
+
+  if (!data) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-black text-red-400 text-lg">
+        No data available
+      </div>
+    );
+  }
 
   return (
-    <div style={styles.container}>
-      <style>{`
-        .leaderboard-selection ::selection {
-          background-color: rgba(255, 215, 0, 0.6) !important;
-          color: #ffffff !important;
-        }
-        .leaderboard-selection ::-moz-selection {
-          background-color: rgba(255, 215, 0, 0.6) !important;
-          color: #ffffff !important;
-        }
-      `}</style>
-      <div className="leaderboard-selection">
-        <h1 style={styles.title}>Leaderboard</h1>
+    <div className="min-h-screen bg-black text-white px-4 pt-25">
+      <div className="max-w-4xl mx-auto">
 
-      {/* ===== TOTAL POINTS ===== */}
-      <Section title="🔥 Total Points">
-        <PointsList items={data.totalPoints} />
-      </Section>
+        {/* TITLE */}
+        <h1 className="text-4xl font-bold text-center text-yellow-400 mb-14 tracking-wide">
+          Leaderboard
+        </h1>
 
-      {/* ===== SPORTS ===== */}
-      <Section title="🏆 Sports Points">
-        <PointsList items={data.sports.points} />
-      </Section>
+        {/* TOTAL POINTS */}
+        <Section title="🔥 Total Points">
+          <PointsList items={data.totalPoints} />
+        </Section>
 
-      {/* ===== CULTURALS ===== */}
-      <Section title="🎭 Culturals Points">
-        <PointsList items={data.culturals.points} />
-      </Section>
+        {/* SPORTS */}
+        <Section title="🏆 Sports Points">
+          <PointsList items={data.sports.points} />
+        </Section>
+
+        {/* CULTURALS */}
+        <Section title="🎭 Culturals Points">
+          <PointsList items={data.culturals.points} />
+        </Section>
+
       </div>
     </div>
   );
@@ -67,8 +76,10 @@ export default function LeaderBoard() {
 
 function Section({ title, children }) {
   return (
-    <section style={{ marginBottom: 40, color: "#ffffff" }}>
-      <h2 style={{ color: "#ffffff" }}>{title}</h2>
+    <section className="mb-14">
+      <h2 className="text-2xl font-semibold text-yellow-300 mb-5 border-b border-yellow-500/40 pb-2">
+        {title}
+      </h2>
       {children}
     </section>
   );
@@ -76,48 +87,42 @@ function Section({ title, children }) {
 
 function PointsList({ items }) {
   return (
-    <ul style={styles.list}>
+    <ul className="space-y-3">
       {items.map((item, index) => (
-        <li key={item.pool} style={styles.listItem}>
-          <span>
-            #{index + 1}{" "}
-            <strong>{POOL_NAMES[item.pool] || item.pool}</strong>
+        <li
+          key={item.pool}
+          className={`
+            flex justify-between items-center px-5 py-4 rounded-lg transition
+            ${getRankBg(index)}
+          `}
+        >
+          <span className="text-sm sm:text-base">
+            <span className="text-yellow-400 font-semibold mr-2">
+              #{index + 1}
+            </span>
+            {POOL_NAMES[item.pool] || item.pool}
           </span>
-          <span>{item.points} pts</span>
+
+          <span className="text-yellow-300 font-bold">
+            {item.points} pts
+          </span>
         </li>
       ))}
     </ul>
   );
 }
 
-/* ================= STYLES ================= */
+/* ================= HELPERS ================= */
 
-const styles = {
-  container: {
-    maxWidth: 900,
-    margin: "0 auto",
-    padding: 24,
-    fontFamily: "sans-serif"
-  },
-  center: {
-    textAlign: "center",
-    marginTop: 40,
-    color: "#ffffff"
-  },
-  title: {
-    textAlign: "center",
-    marginBottom: 30,
-    color: "#ffffff"
-  },
-  list: {
-    listStyle: "none",
-    padding: 0
-  },
-  listItem: {
-    display: "flex",
-    justifyContent: "space-between",
-    padding: "10px 14px",
-    borderBottom: "1px solid #ddd",
-    color: "#ffffff"
+function getRankBg(index) {
+  switch (index) {
+    case 0:
+      return "bg-yellow-500/20 border border-yellow-400 shadow-[0_0_20px_rgba(234,179,8,0.35)]";
+    case 1:
+      return "bg-amber-400/15 border border-gray-300/40";
+    case 2:
+      return "bg-orange-400/15 border border-orange-300/40";
+    default:
+      return "bg-neutral-900 hover:bg-neutral-800 border border-transparent";
   }
-};
+}
