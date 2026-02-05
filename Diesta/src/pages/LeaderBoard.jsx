@@ -15,7 +15,7 @@ export default function LeaderBoard() {
   const [loading, setLoading] = useState(true);
 
   const API_URL =
-    "https://script.google.com/macros/s/AKfycbz30ZpMBp4VMCWyQ_uGqOcC8rkcK86SlOtj2L_6x8U6zxkAVCNvUH0TXhvmkiIavA8T/exec";
+    "https://script.google.com/macros/s/AKfycbxYWznqrYTR8bdyMn-evMY-vn7rzqTLAwA13LVRmT2tDEN-vSM5W6-mrjvhtC24yPg1/exec";
 
   useEffect(() => {
     fetch(API_URL)
