@@ -3,6 +3,7 @@ import '../styles/Schedule.css';
 
 const API_URL = "https://script.google.com/macros/s/AKfycbxHGE7PDuL0JCS2Ki0_-A_6h8RK9H6OTTbnDSh9Q6vs1xq-4Dwhz6QnCoGP1CbmFfg1/exec";
 
+
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState('Feb 6');
   const [searchQuery, setSearchQuery] = useState('');
