@@ -32,12 +32,17 @@ export default function LeaderBoard() {
       <div className="min-h-screen flex items-center justify-center bg-black">
         <div className="flex flex-col items-center gap-5">
           <div 
-            className="w-12 h-12 border-4 border-yellow-400/20 border-t-yellow-400 rounded-full"
+            className="loading-spinner"
             style={{
+              width: '50px',
+              height: '50px',
+              border: '4px solid rgba(212, 175, 55, 0.2)',
+              borderTopColor: '#d4af37',
+              borderRadius: '50%',
               animation: 'spin 1s linear infinite'
             }}
           ></div>
-          <p className="text-yellow-400 text-xl">Loading leaderboard...</p>
+          <p style={{ color: '#d4af37' }}>Loading leaderboard...</p>
         </div>
         <style jsx>{`
           @keyframes spin {

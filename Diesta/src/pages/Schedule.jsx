@@ -139,11 +139,26 @@ const Schedule = () => {
 
   if (loading) {
     return (
-      <div className="schedule-container">
-        <div className="loading-container">
-          <div className="loading-spinner"></div>
-          <p>Loading schedule data...</p>
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <div className="flex flex-col items-center gap-5">
+          <div 
+            className="loading-spinner"
+            style={{
+              width: '50px',
+              height: '50px',
+              border: '4px solid rgba(212, 175, 55, 0.2)',
+              borderTopColor: '#d4af37',
+              borderRadius: '50%',
+              animation: 'spin 1s linear infinite'
+            }}
+          ></div>
+          <p style={{ color: '#d4af37' }}>Loading schedule data...</p>
         </div>
+        <style jsx>{`
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+        `}</style>
       </div>
     );
   }
