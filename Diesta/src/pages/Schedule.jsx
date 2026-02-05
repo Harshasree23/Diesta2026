@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import '../styles/Schedule.css';
 
-const API_URL = "https://script.google.com/macros/s/AKfycbzRVEgAHazArJoauKfWD4_Szw1YdiYnwDfj2DImxSRTkGyNnUu-GVyCBKzygM5mOQ/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbwoXhO9A78kTnMu265-7V1TcW_czZ76bQ6RffMmUMMNRonHMZ0P13dzbpL-MzLXwURB/exec";
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState('Feb 6');
