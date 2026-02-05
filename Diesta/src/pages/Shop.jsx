@@ -158,7 +158,7 @@ const Shop = () => {
 
               <div className="p-6">
                 <h3 className="font-light text-xl text-[#FFD700] ">{p.name} Jersey</h3>
-                <p className="font-bebas text-2xl text-[#FFD700]">₹499</p>
+                <p className="font-bebas text-2xl text-[#FFD700]">₹399</p>
 
               <a
                 href={p.formLink}
