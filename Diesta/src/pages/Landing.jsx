@@ -1,12 +1,13 @@
 import Triangle from '../assets/triangle.png';
 // import ProfileCard from '../ui/Card';
 import backGif from '../assets/back.gif';
-import civil from '../assets/civ.png';
-import chemical from '../assets/chemical.png';
-import cse from '../assets/cse.png';
-import bme from '../assets/bme.png';
-import mae from '../assets/mae.png';
+import civil from '../../public/images/CE_MSME_ID_EM_LOGO.png';
+import chemical from '../../public/images/CH_CY_IC_DESIGN_LOGO.png';
+import cse from '../../public/images/CSE_MNC_MA_PHY_LOGO.png';
+import bme from '../../public/images/EP_ES_BT_BM_LOGO.png';
+import mae from '../../public/images/MAE_LA_HS_CC_LOGO.png';
 import Scroll from '../ui/Scroll';
+import ee from '../../public/images/EE_AI_ICDT_COE_LOGO.png';
 
 const Landing = () => {
 return (
@@ -65,7 +66,7 @@ return (
 
         {/* Cards */}
         <div className='my-30' >
-            <Scroll images={[civil, chemical, cse, bme, mae]} />
+            <Scroll images={[civil, chemical, cse, bme, mae ,ee]} />
             {/* <ProfileCard image={civil} title="Civil / MSME / EM / Interdisciplinary" width='w-55' />
             <ProfileCard image={chemical} title="Chemical / Chemistry / IC / Design"  />
             <ProfileCard image={cse} title="CSE / MnC / Mathematics / Physics"  />
