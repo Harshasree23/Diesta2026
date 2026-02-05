@@ -29,8 +29,21 @@ export default function LeaderBoard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-yellow-400 text-xl">
-        Loading leaderboard…
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <div className="flex flex-col items-center gap-5">
+          <div 
+            className="w-12 h-12 border-4 border-yellow-400/20 border-t-yellow-400 rounded-full"
+            style={{
+              animation: 'spin 1s linear infinite'
+            }}
+          ></div>
+          <p className="text-yellow-400 text-xl">Loading leaderboard...</p>
+        </div>
+        <style jsx>{`
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+        `}</style>
       </div>
     );
   }
