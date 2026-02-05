@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import '../styles/Schedule.css';
 
-const SPORTS_API_URL = "https://script.google.com/macros/s/AKfycbx3-i2RlwpxoYUf0EQ8PNgXbxNYWsvsmxB6MfeNxkltc3kyTy4qUmMP4m2UYDHpwXtp/exec?sheet=sports";
-const CULTURALS_API_URL = "https://script.google.com/macros/s/AKfycbx3-i2RlwpxoYUf0EQ8PNgXbxNYWsvsmxB6MfeNxkltc3kyTy4qUmMP4m2UYDHpwXtp/exec?sheet=culturals";
+const API_URL = "https://script.google.com/macros/s/AKfycbxHGE7PDuL0JCS2Ki0_-A_6h8RK9H6OTTbnDSh9Q6vs1xq-4Dwhz6QnCoGP1CbmFfg1/exec";
+
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState('Feb 6');
@@ -44,8 +44,7 @@ const Schedule = () => {
       try {
         setLoading(true);
         const [sportsResponse, culturalsResponse] = await Promise.all([
-          fetch(SPORTS_API_URL),
-          fetch(CULTURALS_API_URL)
+          fetch(API_URL)
         ]);
 
         if (!sportsResponse.ok || !culturalsResponse.ok) {
