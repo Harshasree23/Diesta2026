@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import '../styles/Schedule.css';
 
-const API_URL = "https://script.google.com/macros/s/AKfycbxHGE7PDuL0JCS2Ki0_-A_6h8RK9H6OTTbnDSh9Q6vs1xq-4Dwhz6QnCoGP1CbmFfg1/exec";
-
+const API_URL = "https://script.google.com/macros/s/AKfycbwgiReebmNKIM4UJw4E3Gvm1aWbGKhtw3SrZRK0GYcx_a8ksETU4jcZmJ9uDN2QxTLk/exec";
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState('Feb 6');
@@ -38,50 +37,28 @@ const Schedule = () => {
     return hours * 60 + minutes;
   };
 
-  // Fetch and merge schedule data
+  // Fetch schedule data
   useEffect(() => {
     const fetchScheduleData = async () => {
       try {
         setLoading(true);
-        const [sportsResponse, culturalsResponse] = await Promise.all([
-          fetch(API_URL)
-        ]);
+        const response = await fetch(API_URL);
 
-        if (!sportsResponse.ok || !culturalsResponse.ok) {
+        if (!response.ok) {
           throw new Error('Failed to fetch schedule data');
         }
 
-        const [sportsResult, culturalsResult] = await Promise.all([
-          sportsResponse.json(),
-          culturalsResponse.json()
-        ]);
+        const result = await response.json();
 
-        // Merge and deduplicate events
-        const mergedData = {};
-        const addEvents = (data, type) => {
-          Object.entries(data).forEach(([date, events]) => {
-            if (!mergedData[date]) mergedData[date] = [];
-            mergedData[date].push(...events.map(event => ({ ...event, type })));
-          });
-        };
-
-        addEvents(sportsResult, 'sports');
-        addEvents(culturalsResult, 'culturals');
-
-        // Remove duplicates and sort by time
-        Object.keys(mergedData).forEach(date => {
-          const seen = new Set();
-          mergedData[date] = mergedData[date]
-            .filter(event => {
-              const key = `${event.s_id || event.c_id}-${event.title}-${event.start_time || event.time}-${event.location}`;
-              if (seen.has(key)) return false;
-              seen.add(key);
-              return true;
-            })
-            .sort((a, b) => parseTimeToMinutes(a.start_time || a.time) - parseTimeToMinutes(b.start_time || b.time));
+        // Sort events by time for each date
+        const processedData = {};
+        Object.keys(result).forEach(date => {
+          processedData[date] = result[date].sort((a, b) => 
+            parseTimeToMinutes(a.start_time || a.time) - parseTimeToMinutes(b.start_time || b.time)
+          );
         });
 
-        setScheduleData(mergedData);
+        setScheduleData(processedData);
         setError(null);
       } catch (err) {
         console.error('Error fetching schedule:', err);
@@ -216,7 +193,7 @@ const Schedule = () => {
       <div className="events-container">
         {getFilteredEvents().length > 0 ? (
           getFilteredEvents().map((event, index) => (
-            <div key={event.s_id || event.c_id || `event-${index}`} className="event-card">
+            <div key={event.id || `event-${index}`} className="event-card">
               {/* Time Badge */}
               <div className="event-time">
                 <span className="time-badge">{formatTime(event)}</span>
