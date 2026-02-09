@@ -11,7 +11,6 @@ const menuItems = [
 { to: "/", label: "Home" },
 { to: "/about", label: "About" },
 { to: "/schedule", label: "Schedule" },
-{ to: "/shop", label: "Shop" },
 { to: "/rules", label: "Rules" },
 { to: "/leaderboard", label: "LeaderBoard" },
 ];
