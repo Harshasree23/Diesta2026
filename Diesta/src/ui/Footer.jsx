@@ -24,7 +24,6 @@ const Footer = () => {
                         <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/'>Home</Link>
                         <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/about'>About</Link>
                         <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/schedule'>Schedule</Link>
-                        <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/shop'>Shop</Link>
                         <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/rules'>Rules</Link>
                         <Link className='hover:bg-yellow-400/40 px-3 py-1.5 rounded-md transition-all duration-300 hover:translate-x-1 text-sm text-center' to='/leaderboard'>LeaderBoard</Link>
                     </div>
